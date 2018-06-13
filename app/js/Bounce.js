@@ -1,7 +1,7 @@
 import "phaser";
 
 class Bounce extends Phaser.Scene {
-  constructor() {
+  constructor(config) {
     super();
   }
   preload() {
@@ -10,7 +10,11 @@ class Bounce extends Phaser.Scene {
 
   create() {
     var logo = this.add.image(400, 150, "logo");
-
+    this.input.on('pointerdown', () => {
+      this.input.stopPropagation();
+      this.scene.sleep();
+      this.sys.game.machine.emit('click');
+    })
     this.tweens.add({
       targets: logo,
       y: 450,

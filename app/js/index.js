@@ -26,10 +26,8 @@ game.scene.add("arrow", Arrow, false);
 game.scene.start(machine.state);
 
 machine.on("bounce", () => {
-  console.log("Switching", machine.state);
-  game.scene.switch("arrow", "bounce")
-//  game.scene.wake(machine.state);
+  game.scene.run(machine.state)
 })
 machine.on("arrow", () => {
-
+  game.scene.run(machine.state)
 });
