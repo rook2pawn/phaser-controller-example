@@ -13,7 +13,7 @@
   "dependencies": {
     "http-server": "^0.11.1",
     "nanostate": "^1.2.1",
-    "phaser": "^3.9.0",
+    "phaser": "git://github.com/photonstorm/phaser.git#master",
     "raw-loader": "^0.5.1",
     "webpack": "^3.4.1"
   }

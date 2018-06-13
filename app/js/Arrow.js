@@ -1,18 +1,19 @@
-import 'phaser'
+import "phaser";
 
 class Arrow extends Phaser.Scene {
-    init () {
+  init() {}
 
-    }
+  preload() {
+    this.load.image("arrow", "assets/longarrow.png");
+  }
 
-    preload () {
-        this.load.image('arrow', 'assets/longarrow.png');
-    }
+  create() {
+    this.pic = this.add.image(400, 300, "arrow").setOrigin(0, 0.5);
+    this.input.once('pointerdown', () => {
+      this.sys.game.machine.emit('click');
+    })
 
-    create () {
-        this.pic = this.add.image(400, 300, 'arrow').setOrigin(0, 0.5);
-
-/*
+    /*
         this.input.once('pointerdown', function () {
 
             this.scene.pause();
@@ -20,12 +21,11 @@ class Arrow extends Phaser.Scene {
 
         }, this);
         */
-    }
+  }
 
-    update (time, delta) {
-        this.pic.rotation += 0.01;
-    }
-
+  update(time, delta) {
+    this.pic.rotation += 0.01;
+  }
 }
 
-export default Arrow
+export default Arrow;
