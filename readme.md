@@ -12,5 +12,5 @@
 * aids in planning what actions/inputs can act upon different states in order to produce a new state change
 
 
-more about [nanocomponent](https://github.com/choojs/nanocomponent)
+more about [nanostate](https://github.com/choojs/nanostate)
 
